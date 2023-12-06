@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Super Vision Pro</title>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main-section">
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+
+    <div id="inputSection0">
+        <label for="chatId">Telegram Chat ID:</label>
+        <input type="text" id="chatId" placeholder="Enter Chat ID">
+        
+        <label for="cooldownPeriod">Cooldown Period (ms):</label>
+        <input type="text" id="cooldownPeriod" placeholder="Enter Cooldown Period">
+
+        <button id="start" onclick="startDetection()">Start Detection</button>
+        <button id="stop" onclick="stopDetection()">Stop Detection</button>
+        <button id="flip" onclick="flipCamera()">Flip Camera</button>
+    </div>
+
+    <script src="/face-api.js"></script>
+    <script src="/face-api.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

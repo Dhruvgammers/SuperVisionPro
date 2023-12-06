@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+#main-section {
+    position: relative;
+    width: 60vw;
+    height: 80vh; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    top: 80px;
+    border-radius: 20px;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#inputSection0{
+    top: 100px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+#inputSection0 label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#inputSection0 input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#inputSection0 button {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#start{
+    background-color: #45a049;
+}
+
+#stop{
+    background-color: red;
+}
+
+#flip{
+    background-color: #333;
+    display: none;
+}
+
+#inputSection0 button:hover {
+    background-color: #45a049;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #main-section {
+        width: 90vw;
+        height: 60vh;
+    }
+
+    #flip {
+        display: block; /* Show the button on mobile devices */
+    }
+}
